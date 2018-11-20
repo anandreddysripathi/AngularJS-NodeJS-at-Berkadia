@@ -1,0 +1,17 @@
+CDN:
+->Content Delivery Network or Content Distributed Network often called as CDN is a system of distributed servers or  networks that deliver web pages and other Web content to a user, based on the geographic locations of the user.
+->The delivery of the web pages is faster as a user's system gets result from the nearest geographical location.
+
+Working of a CDN:
+->Servers nearest to the website visitor respond to the request.
+->The CDN copies the pages of a website to a network of servers that are dispersed at geographically different locations and also it caches the contents of the page.
+->When a user requests a webpage that is part of a CDN, then CDN will redirect the request from the originating site's server to a server in the CDN that is closest to the user and deliver the cached content. 
+->CDNs will also communicate with the originating server to deliver any content that has not been previously cached.
+
+The advantages are:
+->The web browser will access the webpage faster.
+->There will be low load on the server as they are restricted to certain area.
+->High-availability of the webpages and also high-performance
+
+The Disadvantages are:
+->The speed will be slow if the actual website's server is closer to the client than nearest CDN as it need to connect to the CDN, but the actual server is nearest so the data transfer will be comparitively low in this case.
