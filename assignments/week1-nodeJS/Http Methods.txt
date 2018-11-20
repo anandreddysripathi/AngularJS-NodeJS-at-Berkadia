@@ -1,0 +1,39 @@
+Http Methods are those which are invoked during the HTTP request from a client to a server.
+  The importance of Http methods are
+  1)To fetch data from the server to a client.
+  2)To update the data at the server.
+  3)To add data at the server.
+
+There are several Http Methods.Some of them are
+1)GET
+  ->This method is used to retreive all the resources from a server.
+  ->the contents received are cacheable , that means if a client want to take the same data again then it need not to go through the server , it simply takes from the browser's history.
+  ->the content received can be bookmarked.
+  ->This method has only property of delivering the data from a server. 
+  ->This method should not be used when dealing with sensitive data .
+  ->This method will have length restrictions.
+2)POST
+  ->This method creates a new resource on the server.
+  ->The contents are not cacheable and not remained in the browser's history.
+  ->These content cannot be bookmarked.  
+  ->There are no Restrictions on the data length which we give.
+3)PUT
+   ->This method puts a file or resource at specific URI.
+   ->This method replaces an existing file or resource.
+   ->The contents are not cacheable.
+4)PATCH
+   ->This methods updates a partial part of a resource.
+   ->This method is used only when we need to update one field of the resource.
+    For Example say:
+   to activate or deactivate a function from a resource.
+5)DELETE
+ This method deletes a resource at the server side.
+6)OPTIONS
+  This method return the availble HTTP methods that a server can support to which we are connected to.
+7)HEAD
+  This method return the header information.
+8)TRACE
+   This method returns the traces of a request.
+
+
+   

@@ -1,0 +1,13 @@
+MEAN STACK 
+->MEAN is a user-friendly full-stack JavaScript framework ideal for building dynamic websites and applications. ->It is a free and open-source stack designed to supply developers with a quick and organized method for   creating rapid prototypes of MEAN-based web applications.
+->One of the main benefits of the MEAN stack is that a single language, JavaScript, runs on every level of the   application, making it an efficient and modern approach to web development.
+->MEAN applications can be written in one language for both server-side and client-side execution environments.
+->The technologies used in mean are 
+   i)MangoDB-used to handle databases.Uses JSON objects.MongoDB is a system that is No-SQL. So rather than      having row oriented storage, it has document oriented storage. Document in MongoDB is much like JSON
+   ii)Express-uses node.js for backend scripting
+   iii)Angular- used for front end development of web page
+   iv)Node.js-used for backend development of web page
+
+MERN STACK
+->Mern functionality is same as MEAN where in MEAN Angular is used in front-end while in MERN React is used.
+->The technologies used in mern are MangoDB,Express,React, and Node.js

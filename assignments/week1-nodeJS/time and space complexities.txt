@@ -1,0 +1,52 @@
+						Space Complexity:
+						-----------------
+ Whenever a solution to a problem is written some memory is required to complete. For any algorithm memory may be used for like
+   Variables (This include the constant values, temporary values)
+   Program Instruction
+   Execution
+->It is the amount of memory used by the algorithm (including the input values to the algorithm) to execute and produce the result in the system .
+->The amount of space required for variables, execution and program instruction.
+It is calculated as:
+Auxiliary Space is the extra space or the temporary space used by the algorithm during it's execution.
+Space Complexity = Auxiliary Space + Input space
+
+ While executing, algorithm uses memory space for three reasons:
+
+Instruction Space
+-----------------
+->It's the amount of memory used to save the compiled version of instructions.
+
+Environmental Stack
+--------------------
+->Sometimes an algorithm(function) may be called inside another algorithm(function). In such a situation, the   current variables are pushed onto the system stack, where they wait for further execution and then the call   to the inside algorithm(function) is made.
+
+For example, If a function A() calls function B() inside it, then all the variables of the function A() will get stored on the system stack temporarily, while the function B() is called and executed inside the funciton A().
+
+Data Space
+-----------
+->Amount of space used by the variables and constants.
+
+->But while calculating the Space Complexity of any algorithm, we usually consider only Data Space and we  neglect the Instruction Space and Environmental Stack.
+
+
+
+						Time Complexity:
+						----------------
+->The TIme complexity of an algorithm tells us the amount of time the algorithm has taken for complete execution.
+->The time complexity of a program also depends on looping statements which we have used in the program.
+->The time complexities are measured in term of some notations
+  1)Big Oh
+    ------
+    It represents the large amount of time the algorithm has taken to execute we can also say this as worst    case scenario i.e the maximum time it would take to execute 
+  Ex:we take an array and search for an element '5' in the array, suppose array is [2,3,4,5], if the algorithm      search for the element from the first index and go on until end, then this would take the compiler to go      through every element and consumes the maximum time as the element is at the very last position.  
+
+  2)Big Omega:
+    ----------
+    It represents the minimum amount of time taken by the compiler to execute an algorithm.It is often called        as best case.
+  Ex: for the previous example if the element to be searched is found at the very first position then it is the     best case
+
+   3)Theta:
+     ------
+     It represents the average time taken by the compiler to execute the program .
+
+ 

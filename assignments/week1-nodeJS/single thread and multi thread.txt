@@ -1,0 +1,13 @@
+				SINGLE THREAD AND MULTI THREAD:
+				--------------------------------
+->A thread is a lightweight sub-process, the smallest unit of processing.
+Single thread:
+--------------
+->single thread means execution of only a single thread. We cannot perform many operations at time, only one operation can be performed at one time.
+->It blocks the users until the thread execution completes.  
+
+Multithreading:
+---------------
+->It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+->You can perform many operations together, so it saves time.
+->Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread

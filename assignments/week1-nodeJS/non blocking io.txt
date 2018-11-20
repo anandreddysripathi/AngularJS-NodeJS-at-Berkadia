@@ -1,0 +1,7 @@
+						Non-blobcking I/O:
+						-----------------
+->Non-blocking IO means an IO request is queued straight away and the function returns. 
+->The actual IO is then processed later.
+->Parallel programming, difficult to code, more control needed
+->Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine.
+->Node.js uses an event-driven, non-blocking I/O model

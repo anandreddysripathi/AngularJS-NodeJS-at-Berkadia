@@ -1,0 +1,41 @@
+A compiled language:
+--------------------
+1)parse the program
+2)check for syntax errors
+3)check for data types
+4)create internal structure in memory
+5)verify the program semantic
+6)optimize the structure
+7)translate the program in other language
+8)generate files on disk
+9)link the files into an executable
+
+Advantages:
+-----------
+->The entire program is verified so there are no syntax or semantic errors;
+->The executable file is optimized by the compiler so it execute faster;
+->User do not have to execute the program on the same machine it was built;
+
+An interpreted language:
+-------------------------
+1)Is using a REPL = Read Eval Print Loop
+2)Read program line by line
+3)When the statement is completed it will be executed
+4)The results are printed immediately on the console
+5)The programmer can create a script
+6)The script is executed line by line until first error is found
+7)The program stop execution on first error.
+
+Advantages:
+-----------
+->We can find errors before we finish the program and can learn from mistakes;
+->Program can be executed before is finished so we get partial results early;
+->we can see the results and may decide to continue or refuse to build the project;
+
+Disadvantages:
+--------------
+->If a region of the program (a branch) is not executed then is not verified;
+->we must test all possible logical path otherwise we may have syntax errors;
+->we may have runtime syntax errors in scripts that never verified;
+->Program is not optimized by the compiler and is usually a dynamic language which may have data type errors;
+->The program is interpreted in memory every time before is executed,so this may be slow;

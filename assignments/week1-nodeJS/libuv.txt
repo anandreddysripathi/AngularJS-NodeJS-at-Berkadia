@@ -1,0 +1,5 @@
+						LIBUV:
+						------
+->libuv (Unicorn Velociraptor Library) is a multi-platform C library that provides support for asynchronous I/O   based on event loops.
+->In simple words, libuv is a library that allows your JavaScript code (via V8) to perform I/O, whether it is   network, file etc. So from TCP level connectivity all the way to file/system ops are actually performed by   the libuv library.
+->LibUv performs, maintains and manages all the io and events in the event pool.

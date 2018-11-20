@@ -1,0 +1,37 @@
+					Synchronous Programming:
+					------------------------
+->program is executed line by line, one line at a time.
+-> Each time a function is called, program execution waits until that function returns before continuing to the   next line of code.
+->This method of execution can have undesirable outcomes. Suppose a function is called to start a time     consuming process. What if you want to stop the lengthy process? With synchronous execution, your program is   “stuck,” waiting for the process to end, with no way out.
+EX:Javascript
+
+ 
+					Asynchronous Programming:
+					-------------------------
+->Asynchronous execution avoids this bottleneck. You are essentially saying, “I know this function call is   going to take a great deal of time, but my program doesn’t want to wait around while it executes.”
+Ex:node js
+ 
+
+// Exposure time in seconds
+
+TakePicture(long lExposureTime)
+Begin
+ Do
+stuff to take a picture...
+While (notCancelledByUser)
+if (notCancelledByUser == TRUE)
+return NoError; 
+else
+return Error;
+End
+
+Main
+Begin
+ TakePicture(120); 
+ Print(“TakePicture() function returns!”)
+End
+
+ 
+
+->In the above pseudo-code, using synchronous execution, we have to wait two minutes for the call to   TakePicture() return and display the “TakePicture() function returns!” message. There is no way to cancel the   picture.
+->Using asynchronous execution, the TakePicture() function returns immediately and shows the message. Although    the two-minute process is not complete, program can continue to execute. In this manner, program   could set   the notCancelledByUser variable to FALSE to cancel the picture. It can also poll or ask the   TakePicture()   function when the exposure is completed, or if an error occurred during the process.

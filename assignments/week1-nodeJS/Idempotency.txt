@@ -1,0 +1,34 @@
+Idempotency is a property where even if the same methods were called to the server, that dosen't effect the resources at the server.
+Methods showing the Idempotency property are called Idempotent Methods.
+Let us go through some of the HTTP methods and identify if they exist idempotency or not.
+
+1)GET 
+->The method GET is used to retreive values from the server.
+->If the client implements multiple HTTP Get requests then resources are not changed or get modified at the server either.
+->That means this is safe method.
+ 
+so GET is an IDEMPOTENT HTTP METHOD.
+
+2)PUT
+->this method is used to replace a file or resource at the server side from the client's HTTP request to server.
+->If multiple requests are made to put a resource then the resource remain same which will be replacable but not changed.
+  
+EX:
+ let us say a client is calling PUT request by giving a file named a.txt to the server.
+  If the server has already a.txt then it is replaced by the new file, that means resource remains same.
+
+so PUT is also an IDEMPOTENT HTTP METHOD.
+
+3)DELETE
+->This method is used to delete a resource at the server side.
+->if a client requests using HTTP DELETE method multiple times, then the given data file or resource is deleted if exists, if it is already deleted then it will have no effect.
+ so DELETE is an IDEMPOTENT HTTP METHOD.
+
+4)POST
+->this method is used to assign values or insert data or resource at the server side.
+->if multiple PUT requests are implemented, then new data is going to be created at the server side.
+->so repeatable calls are not safe here.
+->need to make as many calls as we need, if making multiple calls then we endup changing something on the server.
+ POST does not exhibit IDEMPOTENCY.
+
+IDEMPOTENT methods are safely-repeatable.

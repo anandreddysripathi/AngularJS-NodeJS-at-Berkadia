@@ -1,0 +1,19 @@
+						Multi-processing:
+						-----------------
+->Multi-processing is the process of executing different process at same time but using the same resources at a   time.
+->A multiprocessing system is one which has more than two processors. The CPUs are added to the system   to increase the computing speed of the system. Each CPU has its own set of registers and main memory.
+
+						Multi-Threading:
+						----------------
+->Multi-Threading is the process of executing different threads at same time, and every thread have their own resources allocated
+
+->Multiprocessing and Multithreading both adds performance to the system. 
+->Multiprocessing is adding more number of or CPUs/processors to the system which increases the computing speed   of the system.
+->Multithreading is allowing a process to create more threads which increase the responsiveness of the system.
+
+Key Differences Between Multiprocessing and Multithreading:
+-----------------------------------------------------------
+->The key difference between multiprocessing and multithreading is that multiprocessing allows a system to have   more than two CPUs added to the system whereas multithreading lets a process generate multiple threads to   increase the computing speed of a system.
+->Multiprocessing system executes multiple processes simultaneously whereas, the multithreading system let   execute multiple threads of a process simultaneously.
+->Creating a process can consume time and even exhaust the system resources. However creating threads is   economical as threads belonging to the same process share the belongings of that process.
+->Multiprocessing can be classified into symmetric multiprocessing and asymmetric multiprocessing whereas,   multithreading is not classified further.

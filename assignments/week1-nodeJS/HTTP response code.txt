@@ -1,0 +1,32 @@
+The Http response is something which is sent by the server to a client in order to give reply to the HTTP request which client has made to the server regarding the data access.
+
+The Http response format is:
+status-line HTTP/[version] [status code] [Status Message]
+
+EX: status-line HTTP/1.1.0 200 OK 1.1.0
+
+->The HTTP/[version] is one of the versions of the HTTP.
+->The status code is the response code which we get from the server, that is for every code there is certain message associated with it which is called 'Status Message'.
+
+
+Http reponse codes/status-codes
+-------------------------------
+
+1XX-Information
+ 100-Server agrees to handle client's request.
+
+2XX-Success
+ 200-request succeeded , status_message is 'OK'
+ 204-no content present
+
+3XX-Redirection
+ 301-Page moved
+ 304-cached page still valid
+
+4XX-Client Error
+ 403-forbidden page
+ 404-page not found
+
+5XX-Server Error
+ 500-Internal server error
+ 503-try again later.  

@@ -1,0 +1,23 @@
+						Data Structure:
+						---------------
+->A data structure is a specialized format for organizing and storing data. 
+->General data structure types include the array, the file, the record, the table, the tree, and so on.
+->Any data structure is designed to organize data to suit a specific purpose so that it can be accessed and   worked with in appropriate ways.
+->In computer programming, a data structure may be selected or designed to store data for the purpose of   working on it with various algorithms.
+->There are 2 types of data structure, Primitive and Non-primitive data structures
+
+Primitive Data Structures:
+--------------------------
+->Primitive Data Structures are the basic data structures that directly operate upon the machine instructions.
+->they have different representations on different computers.
+->Integers, Floating point numbers, Character constants, String constants and Pointers come under this   category.
+
+Non-primitive Data Structures:
+-----------------------------
+->Non-primitive data structures are more complicated data structures and are derived from primitive data   structures.
+->They emphasize on grouping same or different data items with relationship between each data item.
+  Arrays, Lists and Files come under this category.
+->The linear and non-linear data structure is the subclassification of the data structure which comes under the   Non-primitive data structure.
+->The crucial difference between them is that the linear data structure arranges the data into a sequence and   follow some sort of order. Whereas, the non-linear data structure does not organize the data in a sequential   manner.
+->Examples of linear data structures are ARRAYS,STACK,QUEUE.
+->Example of non-linear data structures are TREES,GRAPHS.
