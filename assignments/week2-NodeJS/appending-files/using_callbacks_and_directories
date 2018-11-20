@@ -1,0 +1,32 @@
+const fs = require('fs');
+let directory = __dirname+'\\files\\';
+function readDirectory() {
+    fs.readdir(directory, (err, files) => {
+        if(err) console.log(err);
+        files.forEach(file => {
+        console.log(file);
+            readAndAppendContent(file);
+        });
+    });
+}
+//this is the readContent and append data function
+function readAndAppendContent(file) {
+    fs.readFileSync(directory+file, (err, data) => {
+        if (err) console.error(err);
+        fs.appendFileSync('finalfile.txt', data.toString());
+    });
+}
+readDirectory();		
+ 						Input:(from files folder)
+						------
+anand.txt:
+I'm Anand
+
+vivek.txt:
+I'm Vivek
+
+anusha.txt:
+I'm Anusha
+						Output (finalfile.txt):
+						-----------------------
+I'm AnandI'm AnushaI'm Vivek
