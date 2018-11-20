@@ -1,0 +1,22 @@
+						Callback
+						--------
+->A callback is one of the techniques to implement asynchronous property in node js. 
+->A callback function, also known as a higher-order function, is a function that is passed as an arguement   to the other function, and the callback function is called  inside the otherFunction so that the callback is   executed.
+->When we pass a callback function as an argument to another function, we are only passing the function   definition. We are not executing the function in the parameter.
+->The function (callback function) will be called when we declare calling the callback function explicitly. 
+
+
+A basic program to implement callback function
+-------------------------------------
+y(c)
+
+function c()
+{
+  console.log("this is C");
+}  
+  function y(d)
+{
+console.log("this is y");
+console.log("now i call the callback ");
+ d();
+}
