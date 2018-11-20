@@ -1,0 +1,27 @@
+let fs=require('fs');
+let finalfile='finalfile.txt';
+const merge=(file1,file2)=>{
+    return new Promise((resolve,reject)=>{
+        fs.readFile(file2,'utf-8',(err,data)=>{fs.appendFile(file1,data,()=>{});});
+    });
+}
+merge(finalfile,'anand.txt')
+  .then(merge(finalfile,'vivek.txt'))
+  .then(merge(finalfile,'anusha.txt'))
+  .catch(error=>console.log(error));
+
+
+
+ 						Input:
+						------
+anand.txt:
+I'm Anand
+
+vivek.txt:
+I'm Vivek
+
+anusha.txt:
+I'm Anusha
+						Output (finalfile.txt):
+						-----------------------
+I'm AnandI'm AnushaI'm Vivek
