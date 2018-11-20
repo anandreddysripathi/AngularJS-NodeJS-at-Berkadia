@@ -1,0 +1,24 @@
+					Promise simple program:
+					-----------------------
+let a=new Promise(function(done,not_done){
+    let did=true;
+    if(did)
+    done('you have fulfilled your promise anand');
+    else
+    not_done('you did not fulfill the promise anand');
+}
+)
+a.then(function(str){
+   console.log("inside resolved: "+str);
+}).catch(function(str2){
+    console.log("inside rejected :"+str2);   
+})
+
+
+						Output: 
+						-------
+			inside resolved: you have fulfilled your promise anand
+
+					Output: (if we assign did=false)
+					---------------------------------
+			inside rejected: you did not fulfill the promise anand

@@ -1,0 +1,43 @@
+						Http module:
+						------------
+1) we create an object for http module using require() function.
+2) later we call a method createserver
+3)the object needs to listen to a port on localsystem so we say object.createServer().listen(port_number);
+4)later assign a callback function with two parameters, the first parameter is requests, and the second parameter gives response.
+ ex: http.createServer(function(1st_param,2nd_param)).listen(port_number);
+5)to write something we do call method of the second parameter, which is 2nd_param.write("writable content");
+6)to end the response we call end() of the second parameter like 2nd_param.end();
+
+
+Ex:
+var http = require('http');
+//create a server object:
+http.createServer(function (req, res) {
+  res.write('This is a server response I have done'); //write a response to the client
+  res.end();//this indicates that response has ended 
+}).listen(19980); //the server object listens on port 1998
+
+
+
+						Https Module:
+						-------------
+->HTTPS works in combination with another protocol, Secure Sockets Layer (SSL), to transport data safely (which   is really the key difference that Google cares about).
+->HTTP and HTTPS don’t care how the data gets to its destination. In contrast, SSL doesn’t care what the data     looks like (like HTTP does).
+->HTTPS is the HTTP protocol over TLS/SSL. In Node.js this is implemented as a separate module.
+->The difference between HTTP and HTTPS is if you need to communicate with the servers over SSL, encrypting the   communication using a certificate, you should use HTTPS, otherwise you should use HTTP
+->In https, we need to implement a method writeHead() explicitly, while in Express we can neglect it , it will   do in itself
+
+response.writeHead(statusCode, statusMessage, headers)
+statusCode-number
+statusMessage-string
+headers-Object
+Sends a response header to the request. The status code is a 3-digit HTTP status code, like 404. The last argument, headers, are the response headers. Optionally one can give a human-readable statusMessage as the second argument.
+
+
+var http = require('http');
+//create a server object:
+http.createServer(function (req, res) {
+   res.writeHead(200,{'Content-Type':'text/plain'});
+  res.write('This is a server response I have done'); //write a response to the client
+  res.end();//this indicates that response has ended 
+}).listen(19980); //the server object listens on port 1998

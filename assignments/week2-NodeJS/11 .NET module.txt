@@ -1,0 +1,69 @@
+->Node.js net module is used to create both servers and clients. This module provides an asynchronous network wrapper and it can be imported using require() in our program.
+->The Net module provides a way of creating TCP servers and TCP clients.
+-> in .net first we create connection and then push data and perform requessts and responses.
+
+1)first we need to import net module using require() method.
+2)to create a serve we use object.createServer().
+  net.createServer([options][, connectionListener])
+
+ This Creates a new TCP server. The connectionListener argument is automatically set as a listener for the   'connection' event.
+						program :(serverside)
+						--------
+const net = require('net');
+const server = net.createServer((c) => {
+  // 'connection' listener
+  console.log('client connected');
+  c.on('end', () => {
+    console.log('client disconnected');
+  });
+  c.write('This is message from server');
+  c.pipe(c);
+  console.log("data sent from server");
+});
+server.on('error', (err) => {
+  throw err;
+});
+server.listen(1998, () => {
+  console.log('server established');
+});
+
+					Output:(executing the server js file)
+					-------------------------------------
+1)the server is established and listens to port 1998
+2)we write a message to the server 
+3)we use pipe() function,it reads data from a readable stream as it becomes   available and writes it to a destination writable stream.
+4) when client gets disconnected at any point of time then c.on('end',function()) will be executed.
+
+server established
+client connected
+This is message from server
+data sent from server
+client disconnected
+
+						program:(client side)
+						---------------------
+var net = require('net');
+var client = net.connect({port:1998},()=> {
+   console.log('connected to server!');  
+});
+
+client.on('data',(data)=> {
+   console.log(data.toString());
+   client.end();
+});
+
+client.on('end',() =>{ 
+   console.log('disconnected from server');
+});
+
+						Output:(executing the client js )
+						------
+1)in the output first will connect to the server using the port number in connect().
+2)it takes data from server. and prints the data 
+3)it gets disconnected from server.
+
+   connected to server!
+this is a message from server
+disconnected from server
+
+

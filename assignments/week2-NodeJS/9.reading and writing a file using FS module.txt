@@ -1,0 +1,47 @@
+			Program to read the file and write into the file
+			------------------------------------------------
+var fs = require("fs");
+var required_file='anand.txt';
+console.log("initially the file contains the below information");
+console.log("-------------------------------------------------");
+fs.readFile(required_file, function (err, data) {
+    if (err) {
+       return console.error(err);
+    }
+    console.log(" " + data.toString());
+    console.log("");
+    console.log("Going to write into existing file");
+fs.writeFile(required_file, 'welcome to berkadia training', function(err) {
+   if (err) {
+      return console.error(err);
+   }
+   
+   console.log("Data written successfully!");
+   console.log("the modified data will be:");
+   console.log("---------------------------");
+   fs.readFile(required_file,function(err,data)
+   {
+      if(err)
+      {
+          console.log("error occured");
+      }
+      console.log(" " +data.toString());    
+   });
+},);
+});
+
+
+
+
+						Output:
+						------
+PS C:\Users\ANAND\Operations> node index.js
+initially the file contains the below information
+-------------------------------------------------
+ welcome to berkadia
+
+Going to write into existing file
+Data written successfully!
+the modified data will be:
+---------------------------
+ welcome to berkadia training

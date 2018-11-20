@@ -1,0 +1,30 @@
+					Some Promise libraries:
+					-----------------------
+Bluebird:
+Loaded with features and should be one of the fastest around and with special empathizes on error handling via good stack traces. Features can be toggled via custom builds.
+
+Catiline:
+Mostly designed for handling of web workers but contains a promise implementation. Uses lie underneath.
+
+ES6 Promise polyfill:
+Borrows code from RSVP, but implemented according to the ECMAScript 6 specification.
+
+jQuery:
+Classic library for DOM-manipulation across browsers.
+
+Q:	
+Well known implementation, a light edition of it can be found in the popular AngularJS framework from Google.
+
+
+kew:
+ can be considered as a optimized edition of Q but with a smaller feature set.
+
+
+MyDeferred:
+Small Gist style implementation
+
+MyPromise:
+Small Gist style implementation
+	
+Yui:
+Yahoo’s library for DOM-manipulation across browsers.
