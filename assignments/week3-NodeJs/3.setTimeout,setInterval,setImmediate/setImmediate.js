@@ -9,12 +9,12 @@ let immediate = setImmediate(()=> {
     console.log("Anand Vivek ");
     setImmediate(()=>
     { 
-        a();
+        nextSetImmediate();
         console.log("this is inside setImmediate");
     });
     console.log("this is 2nd log");
     });
-   function a(){
+   function nextSetImmediate(){
       setImmediate(()=>{console.log("this will be setImmediate inside setImmediate")});   
         //clearImmediate(a);
     }  
