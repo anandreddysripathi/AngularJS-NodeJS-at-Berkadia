@@ -9,12 +9,15 @@ let immediate = setImmediate(()=> {
     console.log("Anand Vivek ");
     setImmediate(()=>
     { 
-        let a=setTimeout(()=>{console.log("thi is setImmediate inside setImmediate")},0);   
-        //clearImmediate(a);
+        a();
         console.log("this is inside setImmediate");
     });
     console.log("this is 2nd log");
-    });  
+    });
+   function a(){
+      setImmediate(()=>{console.log("this will be setImmediate inside setImmediate")});   
+        //clearImmediate(a);
+    }  
 //clearImmediate(immediate);
 //clearImmediate is used to prevent the setImmediate
  
@@ -23,7 +26,7 @@ let immediate = setImmediate(()=> {
 Anand Vivek
 this is 2nd log
 this is inside setImmediate
-thi is setImmediate inside setImmediate
+this will be setImmediate inside setImmediate
 PS C:\Users\ANAND\sets>
 */
 
