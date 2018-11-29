@@ -1,12 +1,12 @@
-// async function f() {
-//     let promise = new Promise((resolve, reject) => {
-//         setTimeout(() => resolve("done!"), 5000)
-//     });
-//     let result = await promise; //here the execution pauses until the value of returned to the variable result.
-//     console.log("Now the promise got returned");
-//     console.log(result); // "done!"
-//   }
-//   f();// "done"
+ async function f() {
+     let promise = new Promise((resolve, reject) => {
+         setTimeout(() => resolve("done!"), 5000)
+     });
+     let result = await promise; //here the execution pauses until the value of returned to the variable result.
+     console.log("Now the promise got returned");
+     console.log(result); // "done!"
+   }
+   f();// "done"
 
 /*Output will be:
 PS C:\Users\ANAND> node 6.async,await.js
