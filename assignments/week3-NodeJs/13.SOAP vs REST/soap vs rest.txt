@@ -1,0 +1,58 @@
+SOAP
+->Simple Object Access Protocol
+->communication protocol
+->used for communication between applications
+->provides format for sending messages
+->SOAP communicates via Internet
+->platform independent
+->language independent
+->SOAP is based on XML
+->simple and extensible
+->SOAP allows you to get around firewalls
+->SOAP is a W3C recommendation
+
+SOAP/WSDL web services are essentially a form of remote procedure calls over HTTP
+
+SOAP documents is the XML messages exchanged over HTTP
+
+SOAP comprise of a body as well as an optional header.
+
+Header is an extensible container where message layer information can be encoded for a variety of purposes such as security, quality of service, transactions, etc.
+
+A number of WS specifications have been developed to incorporate additional features into SOAP web services that extend and utilize the header container
+
+
+
+REST
+->Representational State Transfer
+->Introduced as an architectural style for large-scale systems based on distributed resources.
+->REST web services are simply HTTP requests to URIs
+->Uses four methods GET, POST, PUT and DELETE allowed by the HTTP protocol.
+->Each URI identifies a resource, such as a record in a database.
+
+
+
+SOAP vs REST
+1)Location:
+some end points can be behind corporate networks on non-HTTP connects in SOAP while in REST,all endpoints must be on the internet
+ complex B2B scenarios require SOAP.
+2)Security:
+HTTPS which can be augmented with additional security layers in SOAP,Only HTTPS can be used for security in REST 
+
+3)Efficiency
+ XML parsing can be avoided by using JSON in REST while in SOAP , XML parsing is required.
+
+4) Transactions:
+ can be supported in SOAP,
+cannot be supported in REST
+situations requiring multi-request/multi-party transactions need SOAP.
+
+5)Technology
+Soap can work without HTTP,while REST relies on HTTP
+REST is for pure internet communications and cannot mix other transports
+6)Productivity
+ Rest is high due to simplicity
+ SOAP is low due to complex tools and skills required
+ Rest is faster and cheaper for developers to use. 
+
+
