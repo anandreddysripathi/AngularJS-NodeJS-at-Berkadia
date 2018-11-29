@@ -1,0 +1,79 @@
+->API testing involves testing the collection of APIs and checking if they meet expectations for functionality,   reliability, performance, and security and returns the correct response.
+
+->API testing is used to determine whether the output is well-structured and useful to another application or   not, checks the response on basis of input (request) parameter, and checks how much time the API is taking to   retrieve and authorise the data too.
+
+->Postman is an application for testing APIs, by sending request to the web server and getting the response   back.
+->It allows users to set up all the headers and cookies the API expects, and checks the response.
+  Productivity can be increased using some of the Postman features, which are listed below.
+->A test in Postman is fundamentally a JavaScript code, which run after a request is sent and a response has   been received from the server.
+->One can select API call method from the given dropdown list, set Authorisation, Header, Body information   according to the API call.
+ 
+					Environment Variables in Postman:
+					---------------------------------
+One can set the environments variable, from top-right corner, according to the requirement. One can easily set environment variable by following below steps:
+
+1)Click on Manage Environment from Settings (icon available at top right corner).
+2)Click on ADD button.
+3)Write down the Name of the Environment.
+4)Fill key & value, which can be used as variable in collection later.
+
+						Add Collection:
+						---------------
+->One can add Each API call in collection and create a collection, that will be reusable for application.
+->One can import collection of others and can export their collection, so that others can use it on their   machine as well.
+
+
+
+In API calls,
+
+1. HTTP Request?—?Request is the simplest way possible to make http calls.
+
+HTTP Request contains of Request Method, Request URL, Request Headers, Request Body, Pre-request Script and Tests.
+
+Request Methods?—?Request methods defines the type of request to be made.
+
+ four request methods are used frequently, which are as below:
+POST Request?—?For Creating Or Updating data,
+PUT Request?—?For Updating data,
+GET Request?—?For Retrieving/Fetching data and
+DELETE Request?—?For Deleting data.
+
+Request URL?—?It is where to make the http request.
+
+Request Headers?—?In request headers it contains key-value of the application. I have used mainly two key-value, which are as follows:
+
+Content-Type?—?A content-type describes the format of object data. Content-type, which I have used the most for the requests and responses is application/json.
+Authorization?—?An authorization token, included with requests, is used to identify the requester.
+
+Request Body?—?It contains the data, if any (depends on type of request method), to be sent with request. 
+
+
+					Pre-request Script:
+—?Pre-request scripts are piece of code that are executed before the request is sent.
+
+Example: In order to use Postman BDD  with request, one needs to define the below code in Pre-request Script.
+If the environment variable for “postman_bdd_path” is not set, then request, where pre-request script is defined, will use it from the request.
+
+					Tests in Postman
+?—?In Postman one can write and run tests for each request using the JavaScript language.
+
+					2. HTTP Response
+					----------------?
+—?On sending request, API sends the response which consists of the Body, Cookies, Headers, Tests, Status code, and API Response Time.
+
+Postman organises body and headers in different tabs. The status code with the time taken to complete the API call is displayed in another tab.
+
+There are many status code, from which we can verify the response.
+
+Few of them are mentioned below:
+
+200?—?For Successful request.
+201?—?For successful request and data was created.
+204?—?For Empty Response.
+400?—?For Bad Request. The request could not be understood or was missing any required parameters.
+401?—?For Unauthorized access. Authentication failed or user does not have permissions for the requested operation.
+403?—?For Forbidden, Access denied.
+404?—?For data not found.
+405?—?For Method Not Allowed or Requested method is not supported.
+500?—?For Internal Server Error.
+503?—?For Service Unavailable.
