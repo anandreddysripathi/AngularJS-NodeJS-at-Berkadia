@@ -1,8 +1,7 @@
 
 /*
-This is not the only file, but here is where the main functionlaity of my project lies, this code can be found in 
-studentController.js in controller directory,
-this code follows each and every step to naviagte to the next state of my project for CRUd operaions.
+THIS IS NOT THE ONLY FILE,BUT HERE IS WHERE THE MAIN FUNCTIONALITY OF MY PROJECT LIES,THIS CODE CAN BE FOUND IN studentController.js IN controller DIRECTORY.
+THIS CODE FOLLOWS EACH AND EVERY STEP TO NAVIGATE TO THE NEXT STATE OF MY PROJECT FOR CRUD OPERATIONS
 */
 
 const express = require('express');
