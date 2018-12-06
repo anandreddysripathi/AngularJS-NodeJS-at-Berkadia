@@ -1,0 +1,107 @@
+Node.js offers one of the most innovative solutions to building servers , web applications, and mobile applications.
+Some frameworks have extended the functionality of Node.js to a considerable extent and have also built newer features. Here is the list of top magnificent frameworks, Which is gaining prominence for designing better websites and mobile applications.
+
+						Express.js
+						----------
+Express.js is one of the essential and minimalist frameworks for building the web, mobile apps, and application programming interfaces.The advantage of express.js is it is a flexible framework that allows lightweight processing of requests , simple, offers template engines, lesser code, database integration and provide high-level wrappers around node.js.
+
+sample code:
+-----------
+const express = require('express')
+const app = express()
+app.get('/', (req, res) => res.send('Hello World!'))
+
+app.listen(1998,()=>console.log("listening on port 1998"))
+
+
+						Koa.js
+						------
+
+Koa.js is a telescoping call stack that allows adding new features to the call. You can customize the code as per the requirement. To improve readability of the application koa.js uses generators for middle ware flow control and to efficiently deal with call backs. The use of generators eliminates all the callback complexities by enhancing error handling capacity.
+
+sample code:
+------------
+var koa = require('koa');
+var app = koa();
+
+app.use(function* (){
+   this.body = 'Hello world!';
+});
+
+app.listen(3000, function(){
+   console.log('Server running on https://localhost:3000')
+});
+
+						Socket.IO
+						---------
+Socket.io is one of the prominent Node.js frameworks for making real-time web applications. Its ability to work on any platform enables it to provide speed and reliability to the end users. It allows real-time and bidirectional communication between web clients and servers using server-side library for Node.js. and client-side library running in the browser. Socket.IO provides interesting features like storing data associated with each client, broadcasting to multiple sockets, and asynchronous I/O. Leading websites like Trello, Microsoft Office, Zendesk, hackathon winners, Yammer, etc. are using Socket.IO.
+
+sample code:
+------------
+var app = require('express')();
+var http = require('http').Server(app);
+
+app.get('/',(req, res)=> {
+   res.sendfile('index.html');
+});
+
+http.listen(1998,()=> {
+   console.log('listening on localhost:1998');
+});
+
+						Hapi.js
+						-------
+Hapi.js is known as the high-performance and light-weight Node.js framework. Its built-in caching feature facilitates developers to run data-intensive real-time apps across multiple devices. The scalable plug-in architecture of Hapi simplifies the task of distributed teams working on different back-end services. In order to work in the distributed environment with Hapi, the user just need to be acquainted with one specific API, rather than knowing multiple back-end APIs. Hapi has empowered famous companies like Icon, Systems, NICI store, Jibo, Codio, etc
+
+sample code:
+------------
+var hapi=require('hapi');
+
+var server=new hapi.Server();
+server.connection({port:1998});
+server.route([{
+   method:'GET',
+  path:'/',
+handler:function(request,reply){
+reply("Hello world from hapi");
+} 
+}])
+server.start((err)=>
+{
+ console.log("Hapi is listening to localhost:1998");
+})
+
+						Derby.js
+						--------
+Derby is model-view-controller (MVC) full-stack JavaScript framework for creating real-time mobile and web applications. With Derby.js there is no need of compiling CSS. It utilizes the same language both in the server side and the client side then synchronizes the result. It allows real-time concurrency, real-time editing within an application and supports HTML templates to render in the browser or on the server.
+
+sample code:
+------------
+var http = require('http'),
+  express = require('express'),
+  derby = require('derby'),
+  derbyApp = require('./derby-app');
+
+var expressApp = new express(),
+  server = http.createServer(expressApp);
+
+var store = derby.createStore({
+  listen: server
+});
+
+
+						Mean.io
+						-------
+MEAN.IO is an inclusive JavaScript framework specifically developed for accelerating and simplifying the development process of MEAN stack based web apps. It consists of a set of tools that lets you flawlessly put together all the MEAN stack technologies i.e. MongoDB, Express.js, AngularJS, and Node.js, together with other effective technologies like Bootstrap. MEAN.IO also comes equipped with several other CSS, HTML, and additional JavaScript codes that significantly decrease the coding time.
+
+
+						Total.js
+						--------	
+Total.js is one of the most popular Node.js frameworks in 2018. It is a server-side framework facilitating swift development and low maintenance costs. Total.js is absolutely scalable and precise for the developers who build reliable websites, e-commerce portal, REST services, real-time applications or applications for IoT (Internet of Things). The framework is modular and modern and quite easy to start with. It does all compressing for you reducing the need for additional tools for making the most of its implementation. Total.js is compatible with different client-side frameworks like Polymer, Angular.js, Bootstrap, Backbone.js, and is asynchronous and extensible.
+						Sails.js
+						--------
+Sails.js is rock solid node.js framework and is ideal for creating browser-based applications. It comes packed with waterline,the database-agnostic ORM that makes it flexible to work with all databases and front-end agnostic . It is used to create a business grade custom web app. It is also the real-time framework for building Node.js applications. Sails.js offers a model-view-controller (MVC) pattern for implementing data-driven application programming interfaces (APIs), uses underlying express.js for handling HTTP requests and supports any front-end approach.
+
+						Meteor.js
+						---------
+Meteor.js is an open-source model-view-controller (MVC) framework used to build real-time web applications with JavaScript that regularly synchronize with the server. The process of synchronization is handled by the underlying framework in the background. It allows writing both in client and server parts with lesser JavaScript code.
