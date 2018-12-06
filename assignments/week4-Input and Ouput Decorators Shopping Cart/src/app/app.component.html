@@ -1,0 +1,25 @@
+<div style="text-align:center">
+  <h1 style="text-align:center">
+     Items in the Cart are: {{message}} 
+  </h1>
+
+  <!-- 
+  <table>
+    <tr>
+      <th>Products</th>
+      <th>Add To Cart</th>
+    </tr>
+    <tr *ngFor="let i of Products">
+        <td><product[i] (childEvent)="message=$event" [parentData]="message"></product[i]> </td> 
+       </tr> 
+  </table>
+   -->
+
+
+  <product1 (childEvent)="message=$event" [parentData]="message" ></product1>
+  <product2 (childEvent)="message=$event" [parentData]="message"></product2>
+  <product3 (childEvent)="message=$event" [parentData]="message"></product3>
+  <product4 (childEvent)="message=$event" [parentData]="message"></product4>
+  <product5 (childEvent)="message=$event" [parentData]="message"></product5>
+
+</div>
