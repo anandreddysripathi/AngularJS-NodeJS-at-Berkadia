@@ -27,7 +27,8 @@ export class AppComponent {
     'EventName':'Polling',
     'location':'hyderabad'
   }
-
+ 
+  //to be used in ngClass
   public class1={"safe":true}
   public class2={"moderate":true}
   public class3={
