@@ -1,0 +1,45 @@
+<div align="center">
+
+  <!-- using simple interpolation -->
+  
+  <div [ngClass]="class1"><p>Welcome {{title}} to   
+  
+    <!-- here using self-navigation operator so that even if user forgets to put the event name then it will not throw error -->
+    {{Event?.EventName}}</p>
+   </div>    
+  
+  <!--using ngClass here-->
+
+   <div [ngClass]="class2">
+  Select your Gender:
+  <button class="button1" (click)="value='Male'">Male</button>
+  &nbsp;<button  class="button1" [class.button2]=true (click)="value='Female'">Female</button>
+  <br><br></div>
+
+  <!--using ngSwitch here-->
+
+  <div [ngSwitch]="value">
+    <div *ngSwitchCase="'Male'">You are <b>{{value}}</b> </div>
+    <div *ngSwitchCase="'Female'">You are <b>{{value}}</b> </div>
+  <div [ngClass]="class3"> 
+    <br>enter your year of birth </div>
+ <input [(ngModel)]="dob" type="number">
+
+ <!--using ngIf for checking if user is eligible for voting -->
+ <div *ngIf="thisYear-dob<19" [ngClass]="class3"><br><br>You are not eligible for voting</div>
+  
+ <div *ngIf="thisYear-dob>18"> 
+  
+  <!-- here i'm using ngStyle and also expressions in interpolation -->
+  
+   <div [ngClass]="class1" [ngStyle]="styles">  <p> your age is {{thisYear-dob}} and eligible for voting</p> </div> 
+   <button (click)="onClick()" id="vote">I would like to vote</button></div>
+   <br>
+   <div align="center" [hidden]="hide" style='height:200px;background-color: rgb(172, 37, 37);'>
+    
+  <!--using ngFor-->
+
+    <div *ngFor="let i of parties"><br>
+       <b style="color:white">{{i.name}} </b> <button onClick="alert('you have succesfully done voting')">vote</button>
+      </div>
+  </div>

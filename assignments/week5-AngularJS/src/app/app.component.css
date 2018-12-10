@@ -1,0 +1,15 @@
+
+.button1 {font-size:1em;background:grey;color: black}
+.button2 {font-size:1em;background: black;color: white}
+.moderate
+{
+    font-size: 2em; 
+     font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(156, 1, 1)
+}
+.safe
+{
+    font-size: 2em;color: rgb(34, 126, 34)
+}
+.danger{
+    font-size: 2em;color: red
+}
