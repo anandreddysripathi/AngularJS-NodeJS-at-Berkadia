@@ -1,5 +1,7 @@
 Week5 Angular Assignment
+
 In this project I've used
+
 1)Dependency Injection
 
 2)ngSwitch
