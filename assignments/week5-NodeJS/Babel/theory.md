@@ -81,10 +81,10 @@ var anand = {
   _friends: ["Vivek", "Sandesh"],
   printFriends: function printFriends() {
     var _this = this;
-
     this._friends.forEach(function (f) {
       return console.log(_this._name + " knows " + f);
     });
   }
 };
+   
 console.log(anand.printFriends());
