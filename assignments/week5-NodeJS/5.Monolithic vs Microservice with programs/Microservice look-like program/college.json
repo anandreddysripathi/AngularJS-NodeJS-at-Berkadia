@@ -1,0 +1,15 @@
+[{ 
+    "id":10,
+    "name":"anand",
+    "college":"vardhaman"
+}, {
+       "id":20,
+       "name":"vivek",
+       "college":"NIT"
+   },
+   {
+    "id":30,
+    "name":"Anusha",
+    "college":"Osmania"
+}
+]

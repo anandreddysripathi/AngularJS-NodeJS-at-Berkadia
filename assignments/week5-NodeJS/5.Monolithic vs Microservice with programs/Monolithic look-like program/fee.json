@@ -1,0 +1,12 @@
+[{ "college":"vardhaman",
+     "fee":"1000"
+    }, {
+
+       "college":"NIT",
+       "fee":"2000"
+    },
+   {
+    "college":"Osmania",
+    "fee":"3000"
+}
+]
