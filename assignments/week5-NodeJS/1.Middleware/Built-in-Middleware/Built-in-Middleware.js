@@ -8,7 +8,7 @@
 var express = require('express');
 var app = express();
 
-//here public is the default directory and we can navigate through it in the postman or browser
+//here public is the directory and we can navigate through it in the postman or browser
 //Express looks up the files relative to the static directory, so the name of the static directory is not part of the URL.
 app.use(express.static('public'));
  app.listen(1998);
