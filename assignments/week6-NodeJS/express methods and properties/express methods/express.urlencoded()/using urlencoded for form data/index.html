@@ -1,0 +1,24 @@
+<html>
+    <head>
+  <title>simple app</title>
+  <script src="http://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+  <script>
+      $(document).ready(function(){
+        $("#go").click(function(){
+            var user=$("#name").val();
+            var pass=$("#pass").val();
+            $.post("http://localhost:1998/login",{name:user,pass:pass},function(data){
+            })
+        })
+      });
+  </script>    
+</head>
+    <body>    
+    </body>>
+    <h1>Login form</h1>
+    <body>
+        Enter name:<input type="text" name="name"><br>
+        enter Password:<input type="password" name="pass"><br>
+        <input type="button" name="go" value="Submit">
+    </body>
+    </html>
