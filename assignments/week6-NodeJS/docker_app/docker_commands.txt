@@ -1,0 +1,24 @@
+docker start – Starts one or more stopped containers
+docker stop – Stops one or more running containers
+docker build – Builds an image form a Docker file
+docker pull – Pulls an image or a repository from a registry
+docker push – Pushes an image or a repository to a registry
+docker export – Exports a container’s filesystem as a tar archive
+docker exec – Runs a command in a run-time container
+docker search – Searches the Docker Hub for images
+docker attach – Attaches to a running container
+docker commit – Creates a new image from a container’s changes
+
+docker build -t anand . #create image using this directory's Dockerfile
+docker run -p 5000:20 anand #run anand mapping port 5000 to 20
+docker run -d -p 5000:20 anand #same thing,but in detached mode
+docker container ls $list all running containers
+docker container ls -a #list all containers,even those not running
+docker container stop <hash> #dont use angular brackets when giving id, gracefully stop the specified container
+docker container kill <hash> #force shutdown of the specified container
+docker container rm <hash> #remove specified container from this machine
+docker container rm $(docker container ls -a -q) #remove all containers
+docker image ls -a #list all images on this machine
+docker image rm <image id> #remove specified image from this machine
+docker image rm $(docker image ls -a -q) #remove all images from this machine
+
