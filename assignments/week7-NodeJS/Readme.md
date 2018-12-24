@@ -1,4 +1,4 @@
-## this is a ruby program to calculate number of even and odd numbers in the array
+## This is a ruby program to calculate number of even and odd numbers in the array
 
 ## Dockerfile
 ```bash
