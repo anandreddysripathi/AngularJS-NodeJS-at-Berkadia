@@ -4,7 +4,7 @@
 ```bash
  FROM ruby:2.5
 COPY . .
-CMD ["ruby","./hello.rb"]
+CMD ["ruby","./index.rb"]
 ```
 ## creating an image for my program
 
@@ -15,7 +15,7 @@ Step 1/3 : FROM ruby:2.5
  ---> 7834f5f61ba8
 Step 2/3 : COPY . .
  ---> cae89eb94561
-Step 3/3 : CMD ["ruby","./hello.rb"]
+Step 3/3 : CMD ["ruby","./index.rb"]
  ---> Running in 625deac0fba0
 Removing intermediate container 625deac0fba0
  ---> 0f1b28f2e6f8
