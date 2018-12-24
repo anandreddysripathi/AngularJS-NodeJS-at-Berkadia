@@ -35,7 +35,7 @@ puts("the number of ODD elements in the array are ");
 puts(array.count { |x| x % 2 != 0 });
 ```
 
-##Output
+## Output
 
 ```bash
 PS C:\Users\ANAND\Desktop\week7 Node> docker run ruby_sample
