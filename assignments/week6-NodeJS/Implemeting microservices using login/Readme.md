@@ -10,4 +10,4 @@
 
 4)if password is not 1998, then microservice localhost:3000 will not be executed.
 
-5) based on the user type , appropriate content will be displayed in localhost:1000 
+5)based on the user type , appropriate content will be displayed in localhost:1000 
