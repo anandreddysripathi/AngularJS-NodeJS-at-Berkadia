@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class DataService {
 
   constructor(private readonly http:HttpClient) { }
-   //this functions take an api as arguement and returns the json data needed
+   //this function takes an api as arguement and returns the json data needed
   getData(url:string):any{
     return this.http.get(url);
   }
