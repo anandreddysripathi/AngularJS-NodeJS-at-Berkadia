@@ -1,0 +1,20 @@
+<!-- using some fonts and styles to my page -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">This is a film list extracted from swapi.co</h1>
+      <p>This project consists of films available and displays them with their details </div>
+  </div>
+  <div class="container" >
+    <!-- displaying the total number of movies available -->
+    <div class="row">
+      <div class="col-md-4" *ngFor="let movie of ActualData">
+        <h2><i class="fab fa-youtube"></i>&nbsp;{{movie.title}}</h2>
+        <p>{{movie.opening_crawl}}
+          <br><b>Release Date:</b> {{movie.release_date}}
+        </p>
+        <p><button class="btn btn-primary" [routerLink]="['/movie',movie.episode_id]" >View details »</button></p>
+      </div>
+    </div>
+  </div>
