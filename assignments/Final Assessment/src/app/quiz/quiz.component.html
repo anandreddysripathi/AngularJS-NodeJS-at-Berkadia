@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-6">
+    <h3 text-align='center'>Quiz Application</h3>
+  </div>
+  <div class="col-6 text-right">
+  </div>
+</div>
+<div id="quiz">
+  <h2 class="text-center font-weight-normal">{{quiz.name}}</h2>
+  <hr />
+
+  <div *ngIf="mode=='quiz' && quiz">
+    <div *ngFor="let question of filteredQuestions;">
+      <div >Question {{pager.index + 1}} of {{pager.count}}.</div>
+      <h3 class="font-weight-normal">
+        <span  [innerHTML]="question.name"></span>
+      </h3><br>
+      <div class="row text-left options">
+        <div class="col-6" *ngFor="let option of question.options">
+          <div  >
+            <label  [attr.for]="option.id" >
+              <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" /> {{option.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="text-center">
+      <button align='left' class="btn btn-warning" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Previous Question</button>
+      &nbsp;&nbsp;<button class="btn btn-primary" (click)="goTo(pager.index + 1);">Next Question</button>
+    </div><br>
+    <button class="btn btn-danger" (click)="onSubmit();">Submit Quiz</button>
+  </div>
+
+  <div class="result" *ngIf="mode=='result'">
+    <h2>Quiz Result</h2>
+    <div *ngFor="let question of quiz.questions; let index = index">
+      <div class="result-question">
+        <h5>{{index + 1}}. {{question.name}}</h5>
+        <div class="row">
+          <div class="col-6" *ngFor="let Option of question.options">
+            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> {{Option.name}}
+          </div>
+        </div>
+        <div class="p-1 m-2 alert {{ question.verdict == 'correct'? 'alert-success ': 'alert-danger'}}">Your answer is{{question.verdict}}.</div>
+      </div>
+    </div>
+
+    <h2 class="alert alert-info text-center">You scored {{correctAnswersCount*10}}%</h2>
+    <h3 class="alert alert-info text-center"> number of correct answers are {{correctAnswersCount}}</h3>
+    <h4 class="alert alert-info text-center">number of incorrect answers are {{10-correctAnswersCount}} :(</h4>
+  </div>
+  <hr />
+</div>
